@@ -36,7 +36,7 @@ class Simple_Popup {
 
         $js_event_class = $this->utlilties->get_array_element('js-event-class',  $this->data);
 
-        if ($js_event_class === null) return '.' . 'js-set-cookie';
+        if ($js_event_class === null) return 'js-set-cookie';
 
         return $js_event_class;
 
@@ -67,15 +67,13 @@ class Simple_Popup {
         <?php return ob_get_clean();
     }
 
-    public function render_content() {
+    public function render_content($content) {
 
-        $content = $this->utlilties->get_array_element('content',  $this->data);
-
-        if ($content === null) return '';
+        if (is_string($content) === false || $content === '') return '';
 
         ob_start(); ?>
 
-        <p class="simple-popup__content"><?php echo $content; ?></p>
+        <div class="simple-popup__content"><?php echo $content; ?></div>
 
         <?php return ob_get_clean();
     }
@@ -95,7 +93,7 @@ class Simple_Popup {
         <?php return ob_get_clean();
     }
 
-    public function render_popup() {
+    public function render_popup($content) {
 
         $modifier_class = $this->get_modifier_class();
 
@@ -105,7 +103,7 @@ class Simple_Popup {
 
             <?php echo $this->render_close_close_button(); ?>
             <?php echo $this->render_title(); ?>
-            <?php echo $this->render_content(); ?>
+            <?php echo $this->render_content($content); ?>
             <?php echo $this->render_button(); ?>
 
         </div>
@@ -117,19 +115,17 @@ class Simple_Popup {
     static public function enqueue_scripts() {
 
         // TODO this will need to change if converted to a Composer dependency
-        // register scripts from within the plugin
+        // TODO enqueue cookie-js as separate script, make optional include (maybe the theme already includes it...)
 
-        // register featherlight (options)
-        // register Simple Popup scripts (with optional featherlight dependency)
+        add_action( 'wp_enqueue_scripts', 'simple_popup_enqueue_scripts' );
 
-
-        add_action( 'wp_enqueue_scripts', 'supapress_cart_enqueue_scripts' );
-
-        function supapress_cart_enqueue_scripts() {
+        function simple_popup_enqueue_scripts() {
 
             wp_enqueue_style( 'simple-popup', simple_popup_plugin_url( 'includes/css/style.css' ), array(), SIMPLE_POPUP_VERSION, 'all' );
 
             wp_enqueue_script( 'simple-popup', simple_popup_plugin_url( 'includes/js/all.min.js' ), array( 'jquery' ), SIMPLE_POPUP_VERSION, true );
+
+
 
         }
 

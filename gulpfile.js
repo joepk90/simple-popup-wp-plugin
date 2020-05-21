@@ -21,7 +21,8 @@ var gulp = require('gulp'),
 
     basepaths = {
         src: 'source',
-        dest: 'includes'
+        dest: 'includes',
+        node: 'node_modules'
     },
 
     paths = {
@@ -107,8 +108,7 @@ gulp.task('hint', function() {
 gulp.task('scripts', ['clean-scripts', 'hint' ], function () {
 
     return gulp.src([
-        paths.js.bower + '/featherlight/release/featherlight.min.js',
-        paths.js.bower + '/picturefill/dist/picturefill.min.js',
+        basepaths.node + '/js-cookie/src/js.cookie.js',
         paths.js.src + '/**/*.js'
     ], {base: requireConfig.baseUrl})
         .pipe(sourcemaps.init())

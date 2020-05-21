@@ -2,7 +2,7 @@
     $(function() { // shorthand for onLoad()
 
         // ['button', 'close']
-        var options = {
+        // var options = {
             // 'jsPopupSelector'
             // 'jsEventClass': '',
             //   'events': [{
@@ -13,9 +13,9 @@
             //     name: 'wipf-and-stock',
             //     value: "cookie-privacy-policy"
             // }
-        };
+        // };
 
-        var $simplePopup = new SimplePopup();
+        var $simplePopup = new SimplePopup({});
         $simplePopup.init();
 
 
