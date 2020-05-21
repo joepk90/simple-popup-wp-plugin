@@ -9,6 +9,14 @@ if (!defined('ABSPATH')) exit;
 Simple_Popup::enqueue_scripts();
 
 function render_simple_popups() {
+    ?>
+
+    <div class="simple-popups">
+
+    <?php
+
+    // allows for new popups to be added externally before popups from the WP DB
+    do_action('simple_popups_before_rendered_popups');
 
     $data = array(
         'title' => 'Popup Title',
@@ -19,6 +27,16 @@ function render_simple_popups() {
 
     $cookie_popup = new Simple_Popup($data);
     echo $cookie_popup->render_popup('<span>Popup content</span>');
+
+    
+    // allows for new popups to be added externally after popups from the WP DB
+    do_action('simple_popups_after_rendered_popups');
+
+    ?>
+
+    </div>
+
+    <?php
 
 }
 
