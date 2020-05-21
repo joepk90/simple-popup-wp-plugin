@@ -1,6 +1,8 @@
-@import "mixin";
-@import "base";
-//@import "third-party/third-party";
-@import "breakpoints";
-@import "typography";
-@import "simple-popup";
+@import "simple-popup/simple-popup-styles";
+
+// custom plugin styles (keep separate from the popup component)
+.simple-popup {
+  position: fixed; // should be set in the theme
+  left: 20px;  // should be set in the theme
+  bottom: 4%;  // should be set in the theme
+}
