@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) exit;
 // A new class will probably be required here.
 // This is where we can translate post data to popups...
 
-function simple_popups() {
+function render_simple_popups() {
 
     $data = array(
         'title' => 'Popup Title',
@@ -21,4 +21,4 @@ function simple_popups() {
 }
 
 
-add_action('wp_footer', 'upt_cookie_popup');
+add_action('wp_footer', 'render_simple_popups');
