@@ -16,3 +16,8 @@ require_once __DIR__ . '/plugin-utilities.php';
  * Browser Sync
  */
 require_once __DIR__ . '/browser-sync.php';
+
+/**
+ * Browser Sync
+ */
+require_once __DIR__ . '/simple-popups.php';
