@@ -18,6 +18,11 @@ require_once __DIR__ . '/plugin-utilities.php';
 require_once __DIR__ . '/browser-sync.php';
 
 /**
- * Browser Sync
+ * Register Popup Post Type
+ */
+require_once __DIR__ . '/register-post-type.php';
+
+/**
+ * Simple Popups
  */
 require_once __DIR__ . '/simple-popups.php';

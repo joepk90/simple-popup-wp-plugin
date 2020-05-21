@@ -12,7 +12,7 @@ if( !function_exists( 'is_plugin_active' ) ) {
  * ACF Pro Activated Check
  * */
 if( !is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
-    function simple_plugin_error_notice_acf_pro() {
+    function simple_popup_error_notice_acf_pro() {
         ?>
         <div class="error notice">
             <p><?php echo esc_html( SIMPLE_POPUP_PLUGIN_NAME . ': Please install, activate and enter the licence key for Advanced Custom Fields PRO' ); ?></p>
@@ -20,14 +20,14 @@ if( !is_plugin_active( 'advanced-custom-fields-pro/acf.php' ) ) {
         <?php
     }
 
-//    add_action( 'admin_notices', 'simple_plugin_error_notice_acf_pro' );
+//    add_action( 'admin_notices', 'simple_popup_error_notice_acf_pro' );
 }
 
 /*
  * Supapress it Activated Check
  * */
 if( !is_plugin_active( 'supapress/supapress.php' ) ) {
-    function simple_plugin_error_notice_supapress() {
+    function simple_popup_error_notice_supapress() {
         ?>
         <div class="error notice">
             <p><?php echo esc_html( SIMPLE_POPUP_PLUGIN_NAME . ': Please install & activate Supapress' ); ?></p>
@@ -35,5 +35,5 @@ if( !is_plugin_active( 'supapress/supapress.php' ) ) {
         <?php
     }
 
-//    add_action( 'admin_notices', 'simple_plugin_error_notice_supapress' );
+//    add_action( 'admin_notices', 'simple_popup_error_notice_supapress' );
 }
