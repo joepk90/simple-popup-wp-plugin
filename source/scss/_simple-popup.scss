@@ -1,0 +1,53 @@
+.simple-popup {
+  //background-color: $primary-colour;
+  min-height: 300px;
+  padding: rem(15px) rem(20px);
+  z-index: 9999999;
+  overflow: hidden;
+  color: $white;
+  position: fixed;
+  left: 20px;
+  bottom: 4%;
+  width: 300px;
+  box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.4);
+  display: none;
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    padding: rem(5px);
+    //transition: color $animation-time ease;
+    &:hover {
+      //color: $secondary-colour;
+    }
+  }
+
+  &__title {
+    font-size: rem(22px);
+    color: $white;
+  }
+
+  &__content {
+    color: $white;
+    font-size: rem(14px);
+  }
+
+  &__button {
+    color: $black;
+    background: $white;
+    display: inline-block;
+    padding: rem(10px) rem(30px);
+    text-decoration: none;
+    margin-top: rem(20px);
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $black;
+      box-shadow: 0 3px 9px 0 rgba(0, 0, 0, 0.4);
+    }
+  }
+
+}
