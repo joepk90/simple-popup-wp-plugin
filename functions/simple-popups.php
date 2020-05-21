@@ -6,6 +6,8 @@ if (!defined('ABSPATH')) exit;
 // A new class will probably be required here.
 // This is where we can translate post data to popups...
 
+Simple_Popup::enqueue_scripts();
+
 function render_simple_popups() {
 
     $data = array(
