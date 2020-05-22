@@ -21,6 +21,15 @@
         "supadu/php_utilities": "1.0.2",
         "supadu/simple_popup": "^1.0"
     },
+    "scripts": {
+        "remove-supadu-git-submodules" : "find './vendor/supadu/' -mindepth 2 -type d -name .git | xargs rm -rf",
+        "post-install-cmd": [
+            "@remove-supadu-git-submodules"
+        ],
+        "post-update-cmd": [
+            "@remove-supadu-git-submodules"
+        ]
+    },
     "autoload": {
         "psr-0": {
             "Acme": "src/"
