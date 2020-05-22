@@ -25,4 +25,9 @@ require_once __DIR__ . '/register-post-type.php';
 /**
  * Simple Popups
  */
+require_once __DIR__ . '/enqueue-scripts.php';
+
+/**
+ * Simple Popups
+ */
 require_once __DIR__ . '/simple-popups.php';
