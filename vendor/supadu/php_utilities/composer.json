@@ -1,0 +1,22 @@
+{
+    "name": "supadu/php_utilities",
+    "type": "library",
+    "require": {},
+    "authors": [
+        {
+            "name": "Joe Park-Kennaby",
+            "email": "joe.park-kennaby@supadu.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6"
+    },
+    "autoload": {
+        "classmap": [
+            "PHP_Utilities"
+        ]
+    }
+}
