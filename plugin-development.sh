@@ -1,6 +1,6 @@
 if [ "$1" = "start" ]
 then
-git clone git@bitbucket.org:supadu/simple-popup.git git
+git clone git@bitbucket.org:supadu/simple-popup-plugin.git git
 mv git/.git ./
 rm -rf git
 elif [ "$1" = "stop" ]
