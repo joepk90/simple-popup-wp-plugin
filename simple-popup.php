@@ -28,5 +28,7 @@ define( 'SIMPLE_POPUP_PLUGIN_DIR', untrailingslashit( dirname( __FILE__ ) ) );
 
 define( 'SIMPLE_POPUP_PLUGIN_URL', untrailingslashit( plugins_url( '', __FILE__ ) ) );
 
-require __DIR__ . '/components/components.php';
+// Composer Includes
+require_once __DIR__ . '/vendor/autoload.php';
+
 require __DIR__ . '/functions/functions.php';

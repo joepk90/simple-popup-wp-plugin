@@ -1,0 +1,29 @@
+{
+    "name": "supadu/simple-popup-plugin",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Supadu",
+            "email": "notifications@supadu.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:supadu/php-utilities.git"
+        },
+        {
+            "type": "vcs",
+            "url":  "git@bitbucket.org:supadu/simple-popup.git"
+        }
+    ],
+    "require": {
+        "supadu/php_utilities": "1.0.2",
+        "supadu/simple_popup": "^1.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Acme": "src/"
+        }
+    }
+}
